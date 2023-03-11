@@ -59,6 +59,8 @@ function removeFromCart(id, arrayId) {
     totalPrice.textContent = Number(totalPrice.textContent) - menuArray[arrayId].price   
     if (Number(totalPrice.textContent) === 0) {
         cart.classList.toggle('hidden')
+        cartItemsHtml = ''
+        cartItems.innerHTML = ''
     } else {
         const element = document.getElementById(id);
         element.remove();
