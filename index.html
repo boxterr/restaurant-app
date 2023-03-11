@@ -1,0 +1,60 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+       <link rel="stylesheet" href="index.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Smythe&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Jimmy's Diner</h1>
+            <h3>The best burgers and pizzas in town.</h3>
+        </header>
+        <main>
+            <section id="menu">
+            </section>
+            <section id="cart" class="hidden food-list">
+                <h2>Your order</h2>
+                <div>
+                    <div id="cart-items">
+                    </div>
+                     <div id="cart-price" class="added-items">
+                        <div class="food-orders">
+                            <h2>Total Price:</h2>
+                        </div>
+                        <div>
+                            <h3 id="cart-total"></h3>
+                        </div>
+                    </div>
+                    <button id="complete-order-btn">Complete Order</button>
+                </div>
+            </section>
+            <section id="modal" class="hidden">
+                <button id="close-btn">X</button>
+                <h2>Enter Card Details</h2>
+                <input 
+                id="customer-name"
+                type="text" 
+                placeholder="Enter your name"
+                required/>
+                <input 
+                type="tel" 
+                inputmode="numeric" 
+                pattern="[0-9\s]{13,19}"  
+                maxlength="16"
+                placeholder="xxxx xxxx xxxx xxxx"
+                required/>
+                <input 
+                type="tel" 
+                inputmode="numeric" 
+                pattern="[0-9\s]{13,19}"  
+                maxlength="4"
+                placeholder="CVV"
+                required/>
+                <button id="pay-btn" type="submit">Pay</button>
+            </section>
+        </main>
+	<script src="index.js" type="module"></script>
+    </body>
+</html>
+
