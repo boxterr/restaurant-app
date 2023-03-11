@@ -8,8 +8,6 @@ let totalPrice = document.getElementById('cart-total')
 const custName = document.getElementById('customer-name')
 
 document.addEventListener('click', function(e){
-    console.log(e.target.id)
-    
     if (e.target.id === "add-to-cart-btn" && cart.classList.contains("hidden")){
         cart.classList.toggle("hidden")
         renderCartItems(e.target.dataset.id)
@@ -64,6 +62,7 @@ function removeFromCart(id, arrayId) {
     } else {
         const element = document.getElementById(id);
         element.remove();
+        cartItemsHtml = cartItems.innerHTML
     }
 }
 
